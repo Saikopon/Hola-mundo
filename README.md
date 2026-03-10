@@ -31,6 +31,7 @@ La herramienta debe permitir ingresar los siguientes datos de cada empleado:
 - Salario
 
 **Fórmula del salario:**
+Salario = Cantidad de cartones vendidos × Pago por cartón
 
 La herramienta será sencilla de usar y no tendrá complicaciones técnicas.
 
