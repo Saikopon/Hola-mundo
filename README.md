@@ -64,3 +64,28 @@ La herramienta será sencilla de usar y no tendrá complicaciones técnicas.
 4. El sistema **acumula cada resultado** como variable.
 
 5. El sistema muestra en pantalla el **salario final de cada empleado**.
+
+-- 
+
+## Diagrama de flujo
+
+```mermaid
+flowchart TD
+
+A[Inicio] --> B[Ingresar cantidad de empleados]
+B --> C[Empleado = 1]
+
+C --> D{¿Empleado ≤ cantidad?}
+
+D -- Sí --> E[Ingresar identificación]
+E --> F[Ingresar nombre]
+F --> G[Ingresar cartones vendidos]
+G --> H[Calcular salario = cartones × 500]
+H --> I[Mostrar salario del empleado]
+I --> J[Acumular salario total]
+J --> K[Empleado = Empleado + 1]
+K --> D
+
+D -- No --> L[Mostrar total de salarios]
+L --> M[Fin]
+```
