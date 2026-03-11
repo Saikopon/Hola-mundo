@@ -72,24 +72,19 @@ La herramienta será sencilla de usar y no tendrá complicaciones técnicas.
 ```mermaid
 flowchart TD
 
-A[Inicio] --> B[Ingresar cantidad de empleados]
+A([Inicio]) --> B[Ingresar cantidad de empleados]
 B --> C[contador = 1]
-C --> D[totalSalarios = 0]
 
-D --> E{¿contador ≤ cantidad de empleados?}
+C --> D{contador ≤ empleados}
 
-E -- Sí --> F[Ingresar identificación]
-F --> G[Ingresar nombre]
-G --> H[Ingresar cartones vendidos]
+D -- Sí --> E[Ingresar datos del empleado\n(ID, Nombre, Cartones vendidos)]
+E --> F[Calcular salario = cartones × 500]
+F --> G[Mostrar salario]
+G --> H[Acumular salario total]
+H --> I[contador = contador + 1]
 
-H --> I[Calcular salario = cartones × 500]
-I --> J[Mostrar salario del empleado]
+I --> D
 
-J --> K[totalSalarios = totalSalarios + salario]
-K --> L[contador = contador + 1]
-
-L --> E
-
-E -- No --> M[Mostrar total de salarios]
-M --> N[Fin]
+D -- No --> J[Mostrar total de salarios]
+J --> K([Fin])
 ```
